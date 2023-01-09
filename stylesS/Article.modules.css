@@ -1,0 +1,148 @@
+body {
+  font-size: 1.5em;
+
+  padding-bottom: 100px;
+}
+
+header {
+  width: 100%;
+  z-index: 20;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: fixed;
+  display: flex;
+  user-select: none;
+
+  background-color: var(--Light-Base);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+  transition: all;
+
+  display: flex;
+}
+
+header a {
+  font-size: 0.9em;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  padding: 15px;
+
+  color: var(--Light-Text);
+}
+
+header .icon {
+  font-family: "Noto Sans Mono", monospace;
+
+  padding-left: 30px;
+  color: var(--Light-Blue);
+}
+
+header .container .icon:hover {
+  transition-duration: 1s;
+
+  color: var(--Light-Lavender);
+}
+
+header .container .link:hover {
+  transition-duration: 300ms;
+
+  color: var(--Light-Overlay0);
+}
+
+.content-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-container .title {
+  text-align: center;
+  font-weight: 800;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  color: white;
+  font-size: 2em;
+}
+
+.content-container .img-container {
+  display: flex;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-container img {
+  width: 80%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-container .head1 {
+  font-weight: 600;
+  text-indent: 0;
+
+  margin-top: 50px;
+  color: var(--Text);
+}
+
+.content-container p {
+  text-indent: 50px;
+
+  color: var(--Overlay2);
+}
+
+.content-container li {
+  color: var(--Overlay2);
+}
+
+.content-container b {
+  color: var(--Text);
+}
+
+.content-container a {
+  color: var(--Light-Kmutnb);
+  text-decoration: underline;
+}
+
+.content-container .credit {
+  text-indent: 0;
+
+  font-weight: 800;
+  color: var(--Text);
+}
+
+@media screen and (max-width: 600px) {
+  .content-container .title {
+    font-size: 1.3em;
+    text-align: center;
+
+    text-indent: 0;
+  }
+
+  .content-container {
+    font-size: 0.8em;
+  }
+
+  .content-container img {
+    width: 100%;
+  }
+
+  .content-container .credit {
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
