@@ -1,0 +1,93 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&display=swap"); */
+
+:root {
+  --Light-Rosewater: rgb(220, 138, 120);
+  --Light-Flamingo: rgb(221, 120, 120);
+  --Light-Pink: rgb(234, 118, 203);
+  --Light-Mauve: rgb(136, 57, 239);
+  --Light-Red: rgb(210, 15, 57);
+  --Light-Maroon: rgb(230, 69, 83);
+  --Light-Peach: rgb(254, 100, 11);
+  --Light-Yellow: rgb(223, 142, 29);
+  --Light-Green: rgb(64, 160, 43);
+  --Light-Teal: rgb(23, 146, 153);
+  --Light-Sky: rgb(4, 165, 229);
+  --Light-Sapphire: rgb(32, 159, 181);
+  --Light-Blue: rgb(30, 102, 245);
+  --Light-Lavender: rgb(114, 135, 253);
+  --Light-Text: rgb(76, 79, 105);
+  --Light-Subtext1: rgb(92, 95, 119);
+  --Light-Subtext0: rgb(108, 111, 133);
+  --Light-Overlay2: rgb(124, 127, 147);
+  --Light-Overlay1: rgb(140, 143, 161);
+  --Light-Overlay0: rgb(156, 160, 176);
+  --Light-Surface2: rgb(172, 176, 190);
+  --Light-Surface1: rgb(188, 192, 204);
+  --Light-Surface0: rgb(204, 208, 218);
+  --Light-Base: rgb(239, 241, 245);
+  --Light-Mantle: rgb(230, 233, 239);
+  --Light-Crust: rgb(220, 224, 232);
+
+  --Rosewater: rgb(245, 224, 220);
+  --Flamingo: rgb(242, 205, 205);
+  --Pink: rgb(245, 194, 231);
+  --Mauve: rgb(203, 166, 247);
+  --Red: rgb(243, 139, 168);
+  --Maroon: rgb(235, 160, 172);
+  --Peach: rgb(250, 179, 135);
+  --Yellow: rgb(249, 226, 175);
+  --Green: rgb(166, 227, 161);
+  --Teal: rgb(148, 226, 213);
+  --Sky: rgb(137, 220, 235);
+  --Sapphire: rgb(116, 199, 236);
+  --Blue: rgb(137, 180, 250);
+  --Lavender: rgb(180, 190, 254);
+  --Text: rgb(205, 214, 244);
+  --Subtext1: rgb(186, 194, 222);
+  --Subtext0: rgb(166, 173, 200);
+  --Overlay2: rgb(147, 153, 178);
+  --Overlay1: rgb(127, 132, 156);
+  --Overlay0: rgb(108, 112, 134);
+  --Surface2: rgb(88, 91, 112);
+  --Surface1: rgb(69, 71, 90);
+  --Surface0: rgb(49, 50, 68);
+  --Base: rgb(30, 30, 46);
+  --Mantle: rgb(24, 24, 37);
+  --Crust: rgb(17, 17, 27);
+
+  --Kmutnb: #ac3520;
+  --Glowstone: rgba(248, 215, 115, 255);
+
+  --Light-Kmutnb: #f77100;
+  --CIS: #7b0b3d;
+  --PEE-EP: #000075;
+  --SKN: #ec69ab;
+  --PMS: #0015ee;
+  --SWBT: #198bca;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  background-color: var(--Base);
+  color: var(--Text);
+
+  /* font-family: "Noto Sans Mono", monospace; */
+  font-family: "Montserrat", sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
