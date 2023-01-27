@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Super Legit News</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
+    <link href="comments.css" rel="stylesheet">
+    <link href="forms.css" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+       :root {
+        --primary-gray: #bb1dff;
+	--primary-blue: #ab64ea;
+	--primary-red: 	#ff81fb;
+
+	--section-red: #dc93e0;
+	--section-green: #ffef92;
+	--section-purple: #6200ff;
+	--section-orange: #f594bd;
+	--section-blue: #f200ff;
+	--section-pink: #f183f7;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto;
+	width: 60em;
+}
+
+body>header {
+	background: var(--primary-blue);
+	width: 100%;
+	padding: 1em;
+}
+
+header * {
+	color: #fff;
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+	margin: 6px 0 0;
+}
+
+#signup a:first-child::after {
+	content: ' | ';
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	background-color: white;
+	text-align: center;
+	list-style-type: none;
+	padding: 1em 0;
+}
+
+#menu li a {
+	color: black;
+	text-decoration: none;
+}
+
+#menu li:hover {
+	background-color: var(--primary-gray);
+}
+
+#menu li:hover a {
+	color: white;
+}
+
+#hamburger,
+.hamburger {
+	display: none;
+}
+
+/*article */
+#news header {
+	max-width: 10em;
+	padding: 1em;
+	position: absolute;
+}
+
+#news header h1 {
+	margin: 0;
+	text-shadow: .2em .2em .2em black;
+}
+
+#news header a {
+	color: white;
+	text-decoration: none;
+}
+
+#news img {
+	width: 100%;
+}
+
+#news>article {
+	background-color: white;
+	margin: 1em 1em 1em 0;
+}
+
+#news>article>p {
+	padding: 0 1em;
+}
+
+#news>article>p:first-of-type:first-letter {
+	font-size: 2em;
+}
+
+#news footer {
+	color: white;
+	background-color: var(--primary-red);
+	padding: 1em;
+}
+
+#news footer a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+	padding-bottom: 2px;
+}
+
+#news footer .tags {
+	margin-right: 1em;
+}
+
+#news footer .comments {
+	margin-left: 1em;
+}
+
+#news footer .comments:after {
+	content: ' comments';
+}
+
+#news footer .author:before {
+	content: "By ";
+}
+
+/*related */
+#related {
+	background-color: 	#f281cf;
+	padding: 1em;
+}
+
+#related h1 a {
+	color: white;
+	text-decoration: none;
+}
+
+#related p {
+	color: white;
+}
+
+/*footer */
+body>footer {
+	background-color: var(--primary-gray);
+	color: white;
+	padding: 1em;
+	height: 3em;
+}
+
+body>footer p {
+	margin: 0;
+}
+
+/*fonts */
+body {
+	font-family: 'Verdana', sans-serif;
+}
+
+p {
+	font-family: "Georgia", serif;
+	line-height: 1.4em;
+}
+
+header h2 {
+	font-size: 1em;
+}
+
+header a {
+	font-size: 0.8em;
+}
+
+#news header {
+	font-size: 1.5em;
+}
+
+#news footer {
+	font-size: 0.8em;
+}
+
+/*section colors */
+#menu li:nth-child(1) {
+	border-top: 5px solid var(--section-red);
+}
+
+#menu li:nth-child(2) {
+	border-top: 5px solid var(--section-green);
+}
+
+#menu li:nth-child(3) {
+	border-top: 5px solid var(--section-purple);
+}
+
+#menu li:nth-child(4) {
+	border-top: 5px solid var(--section-orange);
+}
+
+#menu li:nth-child(5) {
+	border-top: 5px solid var(--section-blue);
+}
+
+#menu li:nth-child(6) {
+	border-top: 5px solid var(--section-pink);
+}
+:root {
+	--primary-background: #EDEFF0;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 115px 56px auto 48px;
+	grid-template-areas:
+		"header header header header header"
+		"nav nav nav nav aside"
+		"body body body body aside"
+		"footer footer footer footer footer";
+
+	background: var(--primary-background);
+}
+
+body>header {
+	grid-area: header;
+}
+
+#signup {
+	text-align: end;
+}
+
+#menu {
+	grid-area: nav;
+}
+
+#menu ul {
+	display: flex;
+	flex-direction: row;
+	justify-items: stretch;
+
+	width: 100%;
+}
+
+#menu ul li {
+	flex: 1;
+}
+
+#related {
+	grid-row: 1/5;
+	grid-area: aside;
+}
+
+#news,
+#register,
+#login {
+	grid-area: body;
+}
+
+#news footer {
+	text-align: end;
+}
+
+#news footer .author {
+	float: left;
+}
+
+body>footer {
+	grid-area: footer;
+}:root {
+	--primary-background: #EDEFF0;
+}
+@media screen and (max-width: 30em) {
+
+body {
+  grid-template-columns: auto;
+  grid-template-rows: 115px auto auto 48px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "body"
+    "footer";
+  width: 100%;
+}
+
+body>header h2:nth-child(2) {
+  display: none;
+}
+
+#signup {
+  text-align: unset;
+}
+
+.hamburger {
+  display: block;
+  padding: 1em;
+  background: var(--primary-gray);
+}
+
+.hamburger::after {
+  content: "\2630";
+  color: var(--primary-background);
+}
+
+#hamburger:checked+.hamburger::after {
+  content: "\2715";
+}
+
+#menu ul {
+  display: none;
+}
+
+#menu #hamburger:checked~ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu ul li {
+  border-top: none !important;
+  background: lightgray;
+  text-align: unset;
+  padding-left: 1em;
+}
+
+#menu ul li:nth-child(1) {
+  border-left: 5px solid var(--section-red);
+}
+
+#menu ul li:nth-child(2) {
+  border-left: 5px solid var(--section-green);
+}
+
+#menu ul li:nth-child(3) {
+  border-left: 5px solid var(--section-purple);
+}
+
+#menu ul li:nth-child(4) {
+  border-left: 5px solid var(--section-orange);
+}
+
+#menu ul li:nth-child(5) {
+  border-left: 5px solid var(--section-blue);
+}
+
+#menu ul li:nth-child(6) {
+  border-left: 5px solid var(--section-pink);
+}
+
+#related {
+  display: none;
+}
+
+#news>article {
+  margin: 0;
+}
+
+#news header {
+  position: relative;
+  max-width: unset;
+}
+
+#news header h1 {
+  text-shadow: none;
+}
+
+#news header h1 a {
+  color: #000;
+  font-weight: bold;
+}
+
+#register,
+#login {
+  padding: 0;
+  background: #fff;
+}
+
+form {
+  width: 100% !important;
+}
+}
+#comments>h1 {
+	margin: 1em;
+}
+
+.comment {
+	margin: 1em;
+	font-family: "Verdana", serif;
+}
+
+.comment>span {
+	font-weight: bold;
+}
+
+.comment .user::after {
+	content: " said:"
+}
+
+.comment .date {
+	float: right;
+}
+
+.comment p {
+	padding: 1em;
+	background: var(--primary-background);
+
+	/* text-indent: 5em; */
+	position: relative;
+}
+
+.comment p::before {
+	content: "\201C";
+	font-size: 4em;
+	position: relative;
+	top: 24px;
+	color: lightgray;
+	margin-right: 4px;
+}
+#login,
+#register {
+	padding: 1em;
+}
+
+#login>h1,
+#register>h1 {
+	text-align: center;
+	margin: 1em 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 60%;
+	margin: auto;
+	padding: 1em 2em;
+
+	background: #fff;
+
+	font-family: 'Varela', sans-serif;
+}
+
+form label {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	margin: 1em 0;
+
+	font-weight: bold;
+	position: relative;
+}
+
+form label::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: var(--primary-background);
+	opacity: .4;
+
+	transition: all .2s ease-in-out;
+}
+
+form label:has(>input:focus)::after {
+	right: 0;
+	top: 24px;
+}
+
+form input {
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 1em;
+
+	margin-top: .5em;
+	cursor: pointer;
+}
+
+form input:focus {
+	outline: none;
+}
+
+form input[type="submit"] {
+	background: var(--primary-gray);
+	color: #fff;
+	align-self: flex-end;
+}
+
+form input[type="submit"]:hover{
+	color:#000;
+	background-color:rgb(102, 97, 97);
+	}
+    </style>
+    <header>
+      <h1><a href="index.html">Super Legit News</a></h1>
+      <h2><a href="index.html">Where fake news are born!</a></h2>
+      <div id="signup">
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+      </div>
+    </header>
+    <nav id="menu">
+      <!-- just for the hamburguer menu in responsive layout -->
+      <input type="checkbox" id="hamburger"> 
+      <label class="hamburger" for="hamburger"></label>
+
+      <ul>
+        <li><a href="index.html">Local</a></li>
+        <li><a href="index.html">World</a></li>
+        <li><a href="index.html">Politics</a></li>
+        <li><a href="index.html">Sports</a></li>
+        <li><a href="index.html">Science</a></li>
+        <li><a href="index.html">Weather</a></li>
+      </ul>
+    </nav>
+    <aside id="related">
+      <article>
+        <h1><a href="#">Duis arcu purus</a></h1>
+        <p>Etiam mattis convallis orci eu malesuada. Donec odio ex, facilisis ac blandit vel, placerat ut lorem. Ut id sodales purus. Sed ut ex sit amet nisi ultricies malesuada. Phasellus magna diam, molestie nec quam a, suscipit finibus dui. Phasellus a.</p>
+      </article>        
+      <article>
+        <h1><a href="#">Sed efficitur interdum</a></h1>
+        <p>Integer massa enim, porttitor vitae iaculis id, consequat a tellus. Aliquam sed nibh fringilla, pulvinar neque eu, varius erat. Nam id ornare nunc. Pellentesque varius ipsum vitae lacus ultricies, a dapibus turpis tristique. Sed vehicula tincidunt justo, vitae varius arcu.</p>
+      </article>
+      <article>
+        <h1><a href="#">Vestibulum congue blandit</a></h1>
+        <p>Proin lectus felis, fringilla nec magna ut, vestibulum volutpat elit. Suspendisse in quam sed tellus fringilla luctus quis non sem. Aenean varius molestie justo, nec tincidunt massa congue vel. Sed tincidunt interdum laoreet. Vivamus vel odio bibendum, tempus metus vel.</p>
+      </article>
+    </aside>
+    <section id="login">
+      <h1>Login</h1>
+      <form>
+        <label>
+          Username <input type="text" name="username">
+        </label>
+        <label>
+          Password <input type="password" name="password">
+        </label>
+        <input type="submit" value="Login">
+      </form>
+    </section>
+    <footer>
+      <p>&copy; Fake News, 2017</p>
+    </footer>
+  </body>
+</html>

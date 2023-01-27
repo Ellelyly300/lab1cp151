@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Super Legit News</title>    
+    <style>
+:root {
+	--primary-gray: #bb1dff;
+	--primary-blue: #ab64ea;
+	--primary-red: 	#ff81fb;
+
+	--section-red: #dc93e0;
+	--section-green: #ffef92;
+	--section-purple: #6200ff;
+	--section-orange: #f594bd;
+	--section-blue: #f200ff;
+	--section-pink: #f183f7;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto;
+	width: 60em;
+}
+
+body>header {
+	background: var(--primary-blue);
+	width: 100%;
+	padding: 1em;
+}
+
+header * {
+	color: #fff;
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+	margin: 6px 0 0;
+}
+
+#signup a:first-child::after {
+	content: ' | ';
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	background-color: white;
+	text-align: center;
+	list-style-type: none;
+	padding: 1em 0;
+}
+
+#menu li a {
+	color: black;
+	text-decoration: none;
+}
+
+#menu li:hover {
+	background-color: var(--primary-gray);
+}
+
+#menu li:hover a {
+	color: white;
+}
+
+#hamburger,
+.hamburger {
+	display: none;
+}
+
+/*article */
+#news header {
+	max-width: 10em;
+	padding: 1em;
+	position: absolute;
+}
+
+#news header h1 {
+	margin: 0;
+	text-shadow: .2em .2em .2em black;
+}
+
+#news header a {
+	color: white;
+	text-decoration: none;
+}
+
+#news img {
+	width: 100%;
+}
+
+#news>article {
+	background-color: white;
+	margin: 1em 1em 1em 0;
+}
+
+#news>article>p {
+	padding: 0 1em;
+}
+
+#news>article>p:first-of-type:first-letter {
+	font-size: 2em;
+}
+
+#news footer {
+	color: white;
+	background-color: var(--primary-red);
+	padding: 1em;
+}
+
+#news footer a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+	padding-bottom: 2px;
+}
+
+#news footer .tags {
+	margin-right: 1em;
+}
+
+#news footer .comments {
+	margin-left: 1em;
+}
+
+#news footer .comments:after {
+	content: ' comments';
+}
+
+#news footer .author:before {
+	content: "By ";
+}
+
+/*related */
+#related {
+	background-color: 	#f281cc;
+	padding: 1em;
+}
+
+#related h1 a {
+	color: white;
+	text-decoration: none;
+}
+
+#related p {
+	color: white;
+}
+
+/*footer */
+body>footer {
+	background-color: var(--primary-gray);
+	color: white;
+	padding: 1em;
+	height: 3em;
+}
+
+body>footer p {
+	margin: 0;
+}
+
+/*fonts */
+body {
+	font-family: 'Verdana', sans-serif;
+}
+
+p {
+	font-family: "Georgia", serif;
+	line-height: 1.4em;
+}
+
+header h2 {
+	font-size: 1em;
+}
+
+header a {
+	font-size: 0.8em;
+}
+
+#news header {
+	font-size: 1.5em;
+}
+
+#news footer {
+	font-size: 0.8em;
+}
+
+/*section colors */
+#menu li:nth-child(1) {
+	border-top: 5px solid var(--section-red);
+}
+
+#menu li:nth-child(2) {
+	border-top: 5px solid var(--section-green);
+}
+
+#menu li:nth-child(3) {
+	border-top: 5px solid var(--section-purple);
+}
+
+#menu li:nth-child(4) {
+	border-top: 5px solid var(--section-orange);
+}
+
+#menu li:nth-child(5) {
+	border-top: 5px solid var(--section-blue);
+}
+
+#menu li:nth-child(6) {
+	border-top: 5px solid var(--section-pink);
+}
+:root {
+	--primary-background: #EDEFF0;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 115px 56px auto 48px;
+	grid-template-areas:
+		"header header header header header"
+		"nav nav nav nav aside"
+		"body body body body aside"
+		"footer footer footer footer footer";
+
+	background: var(--primary-background);
+}
+
+body>header {
+	grid-area: header;
+}
+
+#signup {
+	text-align: end;
+}
+
+#menu {
+	grid-area: nav;
+}
+
+#menu ul {
+	display: flex;
+	flex-direction: row;
+	justify-items: stretch;
+
+	width: 100%;
+}
+
+#menu ul li {
+	flex: 1;
+}
+
+#related {
+	grid-row: 1/5;
+	grid-area: aside;
+}
+
+#news,
+#register,
+#login {
+	grid-area: body;
+}
+
+#news footer {
+	text-align: end;
+}
+
+#news footer .author {
+	float: left;
+}
+
+body>footer {
+	grid-area: footer;
+}:root {
+	--primary-background: #EDEFF0;
+}
+@media screen and (max-width: 30em) {
+
+body {
+  grid-template-columns: auto;
+  grid-template-rows: 115px auto auto 48px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "body"
+    "footer";
+  width: 100%;
+}
+
+body>header h2:nth-child(2) {
+  display: none;
+}
+
+#signup {
+  text-align: unset;
+}
+
+.hamburger {
+  display: block;
+  padding: 1em;
+  background: var(--primary-gray);
+}
+
+.hamburger::after {
+  content: "\2630";
+  color: var(--primary-background);
+}
+
+#hamburger:checked+.hamburger::after {
+  content: "\2715";
+}
+
+#menu ul {
+  display: none;
+}
+
+#menu #hamburger:checked~ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu ul li {
+  border-top: none !important;
+  background: lightgray;
+  text-align: unset;
+  padding-left: 1em;
+}
+
+#menu ul li:nth-child(1) {
+  border-left: 5px solid var(--section-red);
+}
+
+#menu ul li:nth-child(2) {
+  border-left: 5px solid var(--section-green);
+}
+
+#menu ul li:nth-child(3) {
+  border-left: 5px solid var(--section-purple);
+}
+
+#menu ul li:nth-child(4) {
+  border-left: 5px solid var(--section-orange);
+}
+
+#menu ul li:nth-child(5) {
+  border-left: 5px solid var(--section-blue);
+}
+
+#menu ul li:nth-child(6) {
+  border-left: 5px solid var(--section-pink);
+}
+
+#related {
+  display: none;
+}
+
+#news>article {
+  margin: 0;
+}
+
+#news header {
+  position: relative;
+  max-width: unset;
+}
+
+#news header h1 {
+  text-shadow: none;
+}
+
+#news header h1 a {
+  color: #000;
+  font-weight: bold;
+}
+
+#register,
+#login {
+  padding: 0;
+  background: #fff;
+}
+
+form {
+  width: 100% !important;
+}
+}
+#comments>h1 {
+	margin: 1em;
+}
+
+.comment {
+	margin: 1em;
+	font-family: "Verdana", serif;
+}
+
+.comment>span {
+	font-weight: bold;
+}
+
+.comment .user::after {
+	content: " said:"
+}
+
+.comment .date {
+	float: right;
+}
+
+.comment p {
+	padding: 1em;
+	background: var(--primary-background);
+
+	/* text-indent: 5em; */
+	position: relative;
+}
+
+.comment p::before {
+	content: "\201C";
+	font-size: 4em;
+	position: relative;
+	top: 24px;
+	color: lightgray;
+	margin-right: 4px;
+}
+#login,
+#register {
+	padding: 1em;
+}
+
+#login>h1,
+#register>h1 {
+	text-align: center;
+	margin: 1em 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 60%;
+	margin: auto;
+	padding: 1em 2em;
+
+	background: #fff;
+
+	font-family: 'Varela', sans-serif;
+}
+
+form label {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	margin: 1em 0;
+
+	font-weight: bold;
+	position: relative;
+}
+
+form label::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: var(--primary-background);
+	opacity: .4;
+
+	transition: all .2s ease-in-out;
+}
+
+form label:has(>input:focus)::after {
+	right: 0;
+	top: 24px;
+}
+
+form input {
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 1em;
+
+	margin-top: .5em;
+	cursor: pointer;
+}
+
+form input:focus {
+	outline: none;
+}
+
+form input[type="submit"] {
+	background: var(--primary-gray);
+	color: #fff;
+	align-self: flex-end;
+}
+
+form input[type="submit"]:hover{
+	color:#000;
+	background-color:rgb(102, 97, 97);
+	}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
+    <link href="comments.css" rel="stylesheet">
+    <link href="forms.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Super Legit News</a></h1>
+      <h2><a href="index.html">Where fake news are born!</a></h2>
+      <div id="signup">
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+      </div>
+    </header>
+    <nav id="menu">
+      <!-- just for the hamburguer menu in responsive layout -->
+      <input type="checkbox" id="hamburger"> 
+      <label class="hamburger" for="hamburger"></label>
+
+      <ul>
+        <li><a href="index.html">Local</a></li>
+        <li><a href="index.html">World</a></li>
+        <li><a href="index.html">Politics</a></li>
+        <li><a href="index.html">Sports</a></li>
+        <li><a href="index.html">Science</a></li>
+        <li><a href="index.html">Weather</a></li>
+      </ul>
+    </nav>
+    <aside id="related">
+      <article>
+        <h1><a href="#">Duis arcu purus</a></h1>
+        <p>Etiam mattis convallis orci eu malesuada. Donec odio ex, facilisis ac blandit vel, placerat ut lorem. Ut id sodales purus. Sed ut ex sit amet nisi ultricies malesuada. Phasellus magna diam, molestie nec quam a, suscipit finibus dui. Phasellus a.</p>
+      </article>        
+      <article>
+        <h1><a href="#">Sed efficitur interdum</a></h1>
+        <p>Integer massa enim, porttitor vitae iaculis id, consequat a tellus. Aliquam sed nibh fringilla, pulvinar neque eu, varius erat. Nam id ornare nunc. Pellentesque varius ipsum vitae lacus ultricies, a dapibus turpis tristique. Sed vehicula tincidunt justo, vitae varius arcu.</p>
+      </article>
+      <article>
+        <h1><a href="#">Vestibulum congue blandit</a></h1>
+        <p>Proin lectus felis, fringilla nec magna ut, vestibulum volutpat elit. Suspendisse in quam sed tellus fringilla luctus quis non sem. Aenean varius molestie justo, nec tincidunt massa congue vel. Sed tincidunt interdum laoreet. Vivamus vel odio bibendum, tempus metus vel.</p>
+      </article>
+    </aside>
+    <section id="news">
+      <article>
+        <header>
+          <h1><a href="item.html">Quisque a dapibus magna, non scelerisque</a></h1>
+        </header>
+        <img src="kuromi3.jpg" alt="">
+        <p>Etiam massa magna, condimentum eu facilisis sit amet, dictum ac purus. Curabitur semper nisl vel libero pulvinar ultricies. Proin dignissim dolor nec scelerisque bibendum. Maecenas a sem euismod, iaculis erat id, convallis arcu. Ut mollis, justo vitae suscipit imperdiet, eros dui laoreet enim, fermentum posuere felis arcu vel urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin blandit ex sit amet suscipit commodo. Duis molestie ligula eu urna tincidunt tincidunt. Mauris posuere aliquet pellentesque. Fusce molestie libero arcu, ut porta massa iaculis sit amet. Fusce varius nisl vitae fermentum fringilla. Pellentesque a cursus lectus.</p>
+          <p>Duis condimentum metus et ex tincidunt, faucibus aliquet ligula porttitor. In vitae posuere massa. Donec fermentum magna sit amet suscipit pulvinar. Cras in elit sapien. Vivamus nunc sem, finibus ac suscipit ullamcorper, hendrerit vitae urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eget tincidunt orci. Mauris congue ipsum non purus tristique, at venenatis elit pellentesque. Etiam congue euismod molestie. Mauris ex orci, lobortis a faucibus sed, sagittis eget neque.</p>
+          <p>Mauris tincidunt orci congue turpis viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque rhoncus lorem eget.</p>
+        <footer>
+          <span class="author">Dominic Woods</span>
+          <span class="tags"><a href="index.html">#politics</a> <a href="index.html">#economy</a></span>
+          <span class="date">15m</span>
+          <a class="comments" href="item.html#comments">5</a>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <h1><a href="item.html">Vivamus fermentum dui nisi, at posuere</a></h1>
+        </header>
+        <img src="kuromi1.jpg" alt="" >
+        <p>Donec magna sapien, feugiat vel commodo et, aliquam in purus. Duis posuere, orci eu mollis lobortis, eros augue aliquam augue, et posuere metus nisl semper quam. In tortor nulla, iaculis at varius a, pharetra et lectus. Pellentesque convallis nibh id justo pellentesque, at sollicitudin ex auctor. Nulla ornare rutrum est, ac faucibus turpis interdum et. Vivamus nisi metus, tempor in dapibus in, vestibulum eget diam. Nunc tristique ante eu diam porta, id consectetur ligula sagittis. Pellentesque eu leo vel felis eleifend luctus eget sit amet ligula. Ut semper ante tristique interdum imperdiet. Mauris et libero varius, sollicitudin turpis at, ullamcorper.</p>
+        <p>Nullam et arcu non tellus congue ultrices id id enim. Donec malesuada, neque ut euismod ullamcorper, massa dui congue ante, quis scelerisque enim arcu vel turpis. Praesent ornare elementum finibus. Integer aliquam risus ac lorem mollis, sit amet dignissim dolor faucibus. Praesent non eros ut ligula rhoncus egestas. Duis ex nibh, maximus eget vulputate nec, sagittis in ex. Suspendisse potenti.</p>
+        <p>Praesent pellentesque, nisi ut ultrices sagittis, mauris urna tincidunt nibh, eu faucibus ante nisi eu nisl. Quisque commodo est non sapien rhoncus, a fringilla tellus ultricies. Curabitur eget massa mauris. Sed semper ultrices ante, in cursus enim vehicula at. Praesent.</p>
+        <footer>
+          <span class="author">Zachary Young</span>
+          <span class="tags"><a href="index.html">#local</a> <a href="index.html">#life</a></span>
+          <span class="date">2h</span>
+          <a class="comments" href="item.html#comments">0</a>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <h1><a href="item.html">Donec placerat tempor ex sit amet</a></h1>
+        </header>
+        <img src="kuromi2.jpg" alt=""  height="550">
+        <p>Nam aliquet leo vel scelerisque sagittis. Praesent hendrerit lectus et augue condimentum, vitae dapibus elit bibendum. Quisque id sapien nec nisl commodo vulputate. Cras vehicula semper lectus. Duis a purus in velit iaculis luctus id ac justo. Mauris a lectus eu dui aliquam pretium nec a massa. Suspendisse risus metus, laoreet quis velit eu, mollis auctor tellus. Maecenas vulputate, nulla a commodo porttitor, urna arcu viverra dolor, a eleifend lectus leo a justo.</p>
+        <p>Morbi bibendum volutpat pellentesque. In bibendum est et orci semper rhoncus. Sed cursus vel orci sed malesuada. Fusce ac dictum ligula, quis hendrerit ipsum. Proin hendrerit a.</p>
+        <p>Nulla commodo eu nulla ac facilisis. Donec ante lorem, tincidunt nec interdum vulputate, fringilla a urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien erat, suscipit a nisl sed, molestie convallis eros. Curabitur egestas massa et metus dignissim, et vestibulum libero porttitor. Sed non metus pharetra, lobortis orci a, commodo diam. Praesent a sagittis massa, quis condimentum augue. Donec id est feugiat ipsum egestas vulputate vel in dolor. Pellentesque pretium placerat lorem, sed sodales diam molestie a. Donec dictum dui ut accumsan tempor. Nam vestibulum in erat et sagittis. Donec venenatis, ante vitae tristique tristique, nisi metus aliquet.</p>
+        <footer>
+          <span class="author">Alicia Hamilton</span>
+          <span class="tags"><a href="index.html">#nature</a> <a href="index.html">#science</a></span>
+          <span class="date">17h</span>
+          <a class="comments" href="item.html#comments">2</a>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <h1><a href="item.html">Lorem ipsum dolor sit amet, consectetur</a></h1>
+        </header>
+        <img src="kuromi4.jpg" alt="" height="550">
+        <p>Nulla facilisi. Proin et lectus dapibus, fermentum nisi a, varius nulla. Sed massa dolor, commodo at iaculis id, facilisis ut erat. Ut ac fringilla sem. Ut vel eros suscipit, convallis arcu porttitor, fringilla purus. Pellentesque eget sapien sem. Maecenas eget pharetra ipsum. Ut sollicitudin sem non feugiat pharetra.</p>
+        <p>Aliquam justo nibh, lacinia suscipit odio nec, condimentum tincidunt urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus mi, blandit nec dolor in, ultrices condimentum elit. Quisque interdum, ante non pellentesque viverra, ipsum velit ultrices tortor, id rhoncus orci est at augue. In hac habitasse platea dictumst. Donec dolor nisi.</p>
+        <p>
+Suspendisse potenti. Nullam lacinia dictum massa sed sagittis. Sed id ultrices libero. Cras convallis commodo ante, quis sagittis erat vulputate et. Cras nunc lorem, mollis a nibh eget, dignissim auctor lorem. Suspendisse placerat convallis ante vitae dapibus. Donec tellus felis, tincidunt eget iaculis eget, varius non turpis. Curabitur in eros at sapien fringilla venenatis eu a risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eu consectetur tellus. Suspendisse vitae urna ex. Cras sit amet enim id turpis gravida lacinia a vitae lacus. Vivamus augue ante, pellentesque sed semper non, rutrum ornare ante. Orci varius.</p>
+        <footer>
+          <span class="author">Abril Cooley</span>
+          <span class="tags"><a href="index.html">#transports</a> <a href="index.html">#vehicles</a></span>
+          <span class="date">1d</span>
+          <a class="comments" href="item.html#comments">5</a>
+        </footer>
+      </article>
+    </section>
+    <footer>
+      <p>&copy; Fake News, 2017</p>
+    </footer>
+  </body>
+</html>
+
