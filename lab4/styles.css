@@ -23,3 +23,7 @@
     margin: auto;
     margin-right: 1rem;
 }
+
+.nav-center li {
+    margin-right: 0.5rem;
+}
