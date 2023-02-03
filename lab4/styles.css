@@ -1,0 +1,25 @@
+#tagline {
+    text-align: center;
+}
+
+.container {
+    width:90%;
+}
+
+.btn {
+    float: right;
+}
+
+.nav-flex {
+    display: flex;
+}
+
+.nav-center {
+    float:right;
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    margin: auto;
+    margin-right: 1rem;
+}
