@@ -54,8 +54,7 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
 }
 
 .footer {
-  font-family: 'Fredoka One', cursive;
-
+  
   height: 25px;
   left: 0;
   bottom: 0;
@@ -75,8 +74,6 @@ hr {
 
 .lol {
   text-align: left;
-  font-family: 'Fredoka One', cursive;
-
 }
 
 .dp {
